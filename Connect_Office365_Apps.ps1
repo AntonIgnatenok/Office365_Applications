@@ -1,4 +1,4 @@
-#Connect to Office365 service using PowerShell 
+# Connect to Office365 service using PowerShell 
 
 ## Type AzureAD\Office365 Credentials
 
@@ -57,4 +57,4 @@ Import-PSSession $exchangeSession -DisableNameChecking
 $SccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $credential -Authentication "Basic" -AllowRedirection
 Import-PSSession $SccSession -Prefix cc
 
-#---------------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------------------------------------------------
