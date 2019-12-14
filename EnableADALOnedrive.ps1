@@ -1,4 +1,4 @@
-#Enable ADAL for OneDrive for Business in Windows 10
+#Enable ADAL on OneDrive for Business in Windows 10 (for Intune deployment)
 
 $registryPath = "HKCU:\SOFTWARE\Microsoft\OneDrive"
 $Name = "EnableADAL"
@@ -11,3 +11,5 @@ New-ItemProperty -Path $registryPath -Name $name -Value $value `
 ELSE {
 New-ItemProperty -Path $registryPath -Name $name -Value $value `
 -PropertyType DWORD -Force | Out-Null}
+
+#----------------------------------------------------------------------------------------------------------------
