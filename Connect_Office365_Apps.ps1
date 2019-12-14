@@ -43,6 +43,9 @@ Connect-EXOPSSession -UserPrincipalName eshlomo@cyberint.co #Change UPN value
 Install-Module MicrosoftTeams -Force
 Connect-MicrosoftTeams -Credential $creds 
 
+# Connect Exchange Online via Proxy (Based on WinHttpConfig)
+Connect-EXOPSSession -PSSessionOption (New-PSSessionOption -ProxyAccessType WinHttpConfig)
+
 ### Connect to all service
 $orgName="<Something .onmicrosoft.com>"
 $credential = Get-Credential
