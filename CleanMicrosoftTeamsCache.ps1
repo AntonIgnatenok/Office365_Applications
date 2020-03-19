@@ -1,6 +1,6 @@
 # Clean Microsoft Teams #
-$challenge = Read-Host "Are you sure you want to delete Microsoft Teams Cache (Y/N)?"
-$challenge = $challenge.ToUpper()
+$challenge1 = Read-Host "Are you sure you want to delete Microsoft Teams Cache (Y/N)?"
+$challenge1 = $challenge1.ToUpper()
 if ($challenge -eq "N"){
 Stop-Process -Id $PID
 }elseif ($challenge -eq "Y"){
@@ -12,7 +12,7 @@ Write-Host "Microsoft Teams Process Sucessfully Stopped" -ForegroundColor Green
 }catch{
 echo $_
 }
-Write-Host "Clearing Teams Disk Cache" -ForegroundColor Yellow
+Write-Host "Clearing Microsoft Teams Disk Cache" -ForegroundColor Yellow
 try{
 Get-ChildItem -Path $env:APPDATA\"Microsoft\teams\application cache\cache" | Remove-Item -Confirm:$false
 Get-ChildItem -Path $env:APPDATA\"Microsoft\teams\blob_storage" | Remove-Item -Confirm:$false
